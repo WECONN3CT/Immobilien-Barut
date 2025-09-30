@@ -813,6 +813,13 @@ a:hover {
   .properties-title { text-align: center; }
 }
 
+.properties-cta { text-align: center; margin-top: 1rem; }
+.btn-navy {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+.btn-navy:hover { background: var(--color-dark-navy); color: var(--color-white); }
+
 .section-cta {
   text-align: center;
   margin-top: var(--spacing-3xl);
