@@ -403,6 +403,34 @@ a:hover {
   gap: 12px;
 }
 
+/* Hero: Buttons und Texte in Dunkelblau */
+.hero-search .chip {
+  border-color: var(--color-navy);
+  color: var(--color-navy);
+}
+
+.hero-search .chip-active,
+.hero-search .chip:hover {
+  border-color: var(--color-navy);
+  background: rgba(30,58,95,0.12);
+}
+
+.hero-search .more-btn {
+  border-color: var(--color-navy);
+  color: var(--color-navy);
+  background: var(--color-white);
+}
+
+.hero-search .hero-submit {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.hero-search .hero-field select,
+.hero-search .hero-field input[type="text"] {
+  color: var(--color-navy);
+}
+
 @media (max-width: 768px) {
   .hero-search { width: calc(100% - 24px); flex-direction: column; align-items: stretch; }
   .hero-search-group { border-right: none; margin-right: 0; padding: 4px 6px; }
@@ -514,6 +542,7 @@ a:hover {
 /* Glass look for hero content block for modern aesthetic */
 .hero-content {
   backdrop-filter: saturate(120%) blur(2px);
+  color: var(--color-navy);
 }
 
 .btn-hero {
