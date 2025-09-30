@@ -547,14 +547,14 @@ a:hover {
 }
 
 .award-card.gold:hover::after {
-  animation: awardSheenOnce 2.8s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 forwards;
+  animation: awardSheenLoop 2.8s cubic-bezier(0.22, 1, 0.36, 1) 0s infinite;
 }
 
-@keyframes awardSheenOnce {
+@keyframes awardSheenLoop {
   0% { transform: rotate(16deg) translateX(-180%); opacity: 0.25; }
   12% { opacity: 0.4; }
   50% { opacity: 0.6; }
-  88% { opacity: 0.2; }
+  70% { opacity: 0.2; }
   100% { transform: rotate(16deg) translateX(180%); opacity: 0; }
 }
 
