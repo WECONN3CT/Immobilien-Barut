@@ -758,10 +758,10 @@ a:hover {
 }
 
 /* Mehr Abstand vor About-Section */
-.about-section { margin-top: 2.5rem; }
+.about-section { margin-top: 3.75rem; }
 
 @media (min-width: 1024px) {
-  .about-section { margin-top: 3.5rem; }
+  .about-section { margin-top: 5.25rem; }
 }
 
 .section-dark {
