@@ -162,6 +162,11 @@ a:hover {
   z-index: 1000;
 }
 
+/* Logo weiter links im Header ohne Header-Höhe zu ändern */
+.header .container {
+  padding-left: 0;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
