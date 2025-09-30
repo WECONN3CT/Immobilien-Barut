@@ -510,13 +510,27 @@ a:hover {
 .award-card.white { background: var(--color-white); }
 .award-card.small { padding: var(--spacing-md); }
 
-.award-top { font-weight: 800; font-size: 1.75rem; letter-spacing: 1px; }
-.award-info { font-size: 0.9rem; display: flex; flex-direction: column; gap: 2px; margin-top: 6px; }
+.award-top { font-weight: 900; font-size: 2.25rem; letter-spacing: 1px; }
+.award-info { font-size: 1.05rem; display: flex; flex-direction: column; gap: 4px; margin-top: 8px; }
 .award-title { font-weight: 800; font-size: 1.25rem; line-height: 1.2; }
 .award-year { margin-top: 6px; font-weight: 700; color: var(--color-dark-gray); }
 .award-brand { font-weight: 800; letter-spacing: 0.5px; }
 .award-stars { color: #E67E22; font-size: 1rem; margin: 4px 0; }
 .award-note { font-size: 0.9rem; color: var(--color-charcoal); }
+
+/* Größere TOP-Makler-Karte und Logo unter dem Text */
+.intro-awards .award-card.gold {
+  padding: calc(var(--spacing-xl) * 1.1);
+}
+
+.award-logo {
+  display: block;
+  margin: 12px auto 0;
+  max-width: 120px;
+  width: 60%;
+  height: auto;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+}
 
 @media (max-width: 1024px) {
   .intro-grid { grid-template-columns: 1fr; }
