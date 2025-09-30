@@ -566,7 +566,7 @@ a:hover {
 .award-card.small { padding: var(--spacing-md); }
 
 .award-top { font-weight: 900; font-size: 2.25rem; letter-spacing: 1px; }
-.award-info { font-size: 1.05rem; display: flex; flex-direction: column; gap: 4px; margin-top: 8px; }
+.award-info { font-size: 1.05rem; display: flex; flex-direction: column; gap: 4px; margin-top: 8px; font-weight: 800; }
 .award-title { font-weight: 800; font-size: 1.25rem; line-height: 1.2; }
 .award-year { margin-top: 6px; font-weight: 700; color: var(--color-dark-gray); }
 .award-brand { font-weight: 800; letter-spacing: 0.5px; }
