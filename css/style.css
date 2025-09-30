@@ -757,11 +757,11 @@ a:hover {
   background: var(--color-light-gray);
 }
 
-/* Mehr Abstand vor About-Section */
-.about-section { margin-top: 3.75rem; }
+/* Mehr Abstand vor der About-Section */
+.about-section { padding-top: 6rem; }
 
-@media (min-width: 1024px) {
-  .about-section { margin-top: 5.25rem; }
+@media (max-width: 768px) {
+  .about-section { padding-top: 4.5rem; }
 }
 
 .section-dark {
