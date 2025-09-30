@@ -528,18 +528,18 @@ a:hover {
 .award-card.gold::after {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -120%;
-  width: 120%;
-  height: 200%;
+  top: -60%;
+  left: -180%;
+  width: 160%;
+  height: 220%;
   background: linear-gradient(120deg,
     rgba(255,255,255,0) 0%,
-    rgba(255,255,255,0.75) 45%,
-    rgba(210,230,255,0.35) 50%,
-    rgba(255,255,255,0.75) 55%,
+    rgba(210,230,255,0.15) 42%,
+    rgba(255,255,255,0.9) 50%,
+    rgba(210,230,255,0.15) 58%,
     rgba(255,255,255,0) 100%);
-  transform: rotate(18deg) translateX(-160%);
-  filter: blur(0.75px);
+  transform: rotate(16deg) translateX(-180%);
+  filter: blur(1px);
   pointer-events: none;
   will-change: transform;
   animation: none;
@@ -547,13 +547,15 @@ a:hover {
 }
 
 .award-card.gold:hover::after {
-  opacity: 1;
-  animation: awardSheenOnce 1.6s ease-out 0s 1 forwards;
+  animation: awardSheenOnce 2.2s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 forwards;
 }
 
 @keyframes awardSheenOnce {
-  0% { transform: rotate(18deg) translateX(-160%); }
-  100% { transform: rotate(18deg) translateX(160%); }
+  0% { transform: rotate(16deg) translateX(-180%); opacity: 0; }
+  15% { opacity: 0.25; }
+  50% { opacity: 0.65; }
+  85% { opacity: 0.25; }
+  100% { transform: rotate(16deg) translateX(180%); opacity: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
