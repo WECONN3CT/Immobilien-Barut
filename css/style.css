@@ -529,8 +529,8 @@ a:hover {
   content: '';
   position: absolute;
   top: -50%;
-  left: -150%;
-  width: 60%;
+  left: -120%;
+  width: 120%;
   height: 200%;
   background: linear-gradient(120deg,
     rgba(255,255,255,0) 0%,
@@ -538,23 +538,27 @@ a:hover {
     rgba(210,230,255,0.35) 50%,
     rgba(255,255,255,0.75) 55%,
     rgba(255,255,255,0) 100%);
-  transform: rotate(18deg) translateX(-100%);
-  filter: blur(0.5px);
+  transform: rotate(18deg) translateX(-160%);
+  filter: blur(0.75px);
   pointer-events: none;
   will-change: transform;
-  animation: awardSheen 6s ease-in-out infinite;
+  animation: none;
+  opacity: 0;
 }
 
-.award-card.gold:hover::after { animation-duration: 3s; }
+.award-card.gold:hover::after {
+  opacity: 1;
+  animation: awardSheenOnce 1.6s ease-out 0s 1 forwards;
+}
 
-@keyframes awardSheen {
-  0% { transform: rotate(18deg) translateX(-140%); }
-  60% { transform: rotate(18deg) translateX(140%); }
-  100% { transform: rotate(18deg) translateX(140%); }
+@keyframes awardSheenOnce {
+  0% { transform: rotate(18deg) translateX(-160%); }
+  100% { transform: rotate(18deg) translateX(160%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .award-card.gold::after { animation: none; }
+  .award-card.gold:hover::after { animation: none; opacity: 0; }
 }
 .award-card.white { background: var(--color-white); }
 .award-card.small { padding: var(--spacing-md); }
