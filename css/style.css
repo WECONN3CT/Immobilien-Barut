@@ -505,9 +505,24 @@ a:hover {
   background: var(--color-white);
   padding: var(--spacing-lg);
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.award-card.gold { background: linear-gradient(180deg, #f0d58a 0%, #d7b970 100%); color: #1E1E1E; }
+.award-card.gold {
+  background: linear-gradient(180deg, #f5f7fa 0%, #e9eff7 35%, #dbe4ef 70%, #cfd8e3 100%);
+  color: #1E1E1E;
+  border-color: #d6deea;
+  box-shadow: 0 8px 24px rgba(30,58,95,0.12), inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.award-card.gold::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.12) 40%, rgba(224,236,255,0.10) 60%, rgba(255,255,255,0.28) 100%);
+  pointer-events: none;
+}
 .award-card.white { background: var(--color-white); }
 .award-card.small { padding: var(--spacing-md); }
 
