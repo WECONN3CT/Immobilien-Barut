@@ -486,10 +486,11 @@ a:hover {
   line-height: 1.04;
   margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(232,238,246,1) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-navy);
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: var(--color-navy);
 }
 
 .hero-title::after {
@@ -503,7 +504,7 @@ a:hover {
 }
 
 .hero-subtitle {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-navy);
   font-size: clamp(1.05rem, 2.1vw, 1.35rem);
   font-weight: 500;
   margin-bottom: 1.75rem;
@@ -516,7 +517,7 @@ a:hover {
 }
 
 .btn-hero {
-  background: var(--color-orange);
+  background: var(--color-navy);
   color: var(--color-white);
   padding: 0.9rem 1.5rem;
   border-radius: var(--radius-md);
@@ -525,13 +526,13 @@ a:hover {
   border: none;
   cursor: pointer;
   transition: var(--transition-default);
-  box-shadow: 0 8px 25px rgba(230, 126, 34, 0.35);
+  box-shadow: 0 8px 25px rgba(30, 58, 95, 0.35);
 }
 
 .btn-hero:hover {
-  background: var(--color-dark-orange);
+  background: var(--color-dark-navy);
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(230, 126, 34, 0.45);
+  box-shadow: 0 10px 28px rgba(21, 43, 66, 0.45);
 }
 
 @media (max-width: 768px) {
