@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
         loadFeaturedProperties();
         initPropertiesCarousel();
     }
+
+    // Load Newest Properties under Hero
+    if (document.getElementById('newestProperties')) {
+        loadNewestProperties();
+    }
     
     // Form Validation
     initFormValidation();
@@ -170,6 +175,68 @@ async function loadFeaturedProperties() {
         const featuredContainer = document.getElementById('featuredProperties');
         if (featuredContainer) {
             featuredContainer.innerHTML = '<p class="text-center">Immobilien werden geladen...</p>';
+        }
+    }
+}
+
+// ===================================
+// Load Newest Properties (Under Hero)
+// ===================================
+
+async function loadNewestProperties() {
+    try {
+        const response = await fetch('data/properties.json');
+        const data = await response.json();
+
+        const newestContainer = document.getElementById('newestProperties');
+        if (!newestContainer) return;
+
+        const newest = data.properties.slice(0, 6);
+        newestContainer.innerHTML = newest.map(property => `
+            <article class="property-card">
+                <img src="${property.images[0] || 'images/properties/placeholder.jpg'}" 
+                     alt="${property.title}" 
+                     class="property-image"
+                     loading="lazy">
+                <div class="property-content">
+                    <div class="property-price">
+                        ${property.type === 'Miete' ? property.price.toLocaleString('de-DE') + ' €/Monat' : property.price.toLocaleString('de-DE') + ' €'}
+                    </div>
+                    <h3 class="property-title">${property.title}</h3>
+                    <div class="property-location">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        ${property.location}
+                    </div>
+                    <div class="property-features">
+                        <span class="property-feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="9" y1="6" x2="15" y2="6"></line>
+                                <line x1="9" y1="10" x2="15" y2="10"></line>
+                            </svg>
+                            ${property.rooms} Zimmer
+                        </span>
+                        <span class="property-feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                            ${property.size} m²
+                        </span>
+                    </div>
+                    <a href="immobilien.html#property-${'${property.id}'}" class="property-link">Details ansehen →</a>
+                </div>
+            </article>
+        `).join('');
+    } catch (error) {
+        console.error('Error loading newest properties:', error);
+        const newestContainer = document.getElementById('newestProperties');
+        if (newestContainer) {
+            newestContainer.innerHTML = '<p class="text-center">Immobilien werden geladen...</p>';
         }
     }
 }

@@ -771,6 +771,48 @@ a:hover {
   margin-bottom: var(--spacing-3xl);
 }
 
+/* Properties Finder Section */
+.section-properties { background: var(--color-white); padding-top: 2.5rem; }
+.properties-title { text-align: left; margin-bottom: 1.5rem; }
+
+.properties-search { margin-bottom: 1.25rem; }
+.properties-search-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 0.75rem;
+}
+.properties-field select {
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  border: 2px solid var(--color-medium-gray);
+  padding: 8px 12px;
+  font-size: 1rem;
+}
+.properties-submit {
+  height: 44px;
+  padding: 0 1.25rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-weight: 700;
+  cursor: pointer;
+}
+.properties-submit:hover { background: var(--color-dark-navy); }
+
+.properties-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin: 1.5rem 0 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .properties-search-row { grid-template-columns: 1fr; }
+  .properties-title { text-align: center; }
+}
+
 .section-cta {
   text-align: center;
   margin-top: var(--spacing-3xl);
