@@ -918,6 +918,20 @@ a:hover {
 .reveal { opacity: 0; transform: translateY(16px); }
 .reveal.revealed { opacity: 1; transform: translateY(0); transition: opacity .6s ease, transform .6s ease; }
 
+/* Unsere Leistungen: Akzente in Dunkelblau statt Orange */
+.services-sticky .service-icon { background: var(--color-navy); }
+.services-sticky .service-card:hover { border-color: var(--color-navy); }
+.services-sticky .service-link { color: var(--color-navy); }
+.services-sticky .service-link:hover { color: var(--color-dark-navy); }
+.services-sticky .service-cta {
+  background: linear-gradient(180deg, rgba(30,58,95,0.95) 0%, rgba(21,43,66,0.88) 100%);
+  border-color: var(--color-navy);
+}
+.services-sticky .service-cta:hover {
+  box-shadow: 0 12px 30px rgba(21,43,66,0.35), 0 0 0 4px rgba(21,43,66,0.2) inset;
+}
+.services-sticky .service-cta-btn { color: var(--color-navy); }
+
 @media (max-width: 1024px) {
   .services-sticky { grid-template-columns: 1fr; }
   .sticky-media { position: static; top: auto; margin-bottom: var(--spacing-2xl); align-self: auto; }
