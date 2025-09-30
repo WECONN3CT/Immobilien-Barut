@@ -188,12 +188,7 @@ a:hover {
   transform-origin: left center;
 }
 
-.logo-text {
-  margin-left: 12px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #000000;
-}
+/* removed .logo-text */
 
 .logo h1 {
   font-size: 1.5rem;
