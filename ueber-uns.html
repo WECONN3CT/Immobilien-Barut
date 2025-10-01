@@ -208,6 +208,57 @@
             margin: 0 auto 1rem;
         }
 
+        /* Approach Section (Text links, Bild rechts) */
+        .approach-section {
+            background: var(--color-white);
+            padding: 4rem 0;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .approach-title {
+            color: var(--color-navy);
+            font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.25;
+            text-align: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .approach-sub {
+            color: var(--color-navy);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .approach-text {
+            color: var(--color-charcoal);
+            line-height: 1.9;
+            text-align: center;
+            max-width: 880px;
+            margin: 0.5rem auto;
+        }
+
+        .approach-cta { text-align: center; margin-top: 1.75rem; }
+
+        .approach-media img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        @media (max-width: 1024px) {
+            .approach-grid { grid-template-columns: 1fr; }
+        }
+
         /* Trust Section (unter "Unsere Werte") */
         .trust-section {
             background: var(--color-white);
@@ -465,39 +516,21 @@
         </div>
     </section>
 
-    <!-- Certificates Section -->
-    <section class="section">
+    <!-- Approach Section (statt Zertifizierungen) -->
+    <section class="approach-section">
         <div class="container">
-            <h2 class="section-title">Zertifizierungen & Mitgliedschaften</h2>
-            <div class="certificates">
-                <div class="certificate">
-                    <div class="certificate-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#E67E22" stroke-width="2">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
+            <div class="approach-grid">
+                <div>
+                    <h2 class="approach-title">Unser Bestreben: Kunden bei allen Schritten ihres Invests optimal unterstützen</h2>
+                    <p class="approach-sub">Unser Ansatz geht weit über den Kauf einer Immobilie hinaus:</p>
+                    <p class="approach-text">Es geht darum, Ihr gesamtes Vorhaben von Anfang an richtig anzugehen und Sie bei allen Schritten optimal zu unterstützen. Ihre Beziehung mit uns endet nicht mit dem Kauf, sie beginnt damit erst so richtig.</p>
+                    <p class="approach-text">Wir unterstützen Sie vor, während und nach dem Kauf und stehen Ihnen bei allen Schritten zur Seite.</p>
+                    <div class="approach-cta">
+                        <a href="kontakt.html" class="btn btn-primary">Jetzt kontaktieren & Termin buchen</a>
                     </div>
-                    <h4>IVD Mitglied</h4>
-                    <p>Immobilienverband Deutschland</p>
                 </div>
-                <div class="certificate">
-                    <div class="certificate-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#E67E22" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            <path d="M9 12l2 2 4-4"></path>
-                        </svg>
-                    </div>
-                    <h4>TÜV Zertifiziert</h4>
-                    <p>Geprüfte Qualität</p>
-                </div>
-                <div class="certificate">
-                    <div class="certificate-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#E67E22" stroke-width="2">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                        </svg>
-                    </div>
-                    <h4>Ausgezeichnet</h4>
-                    <p>98% Kundenzufriedenheit</p>
+                <div class="approach-media">
+                    <img src="images/start/ihrexperte.png" alt="Beratungssituation" loading="lazy">
                 </div>
             </div>
         </div>
