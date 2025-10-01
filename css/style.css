@@ -313,6 +313,21 @@ a:hover {
   z-index: 1;
 }
 
+/* Linkes Bild in der Hero-Section */
+.hero-person {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  width: min(26vw, 360px);
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .hero-person { width: min(38vw, 220px); left: 10px; bottom: 10px; }
+}
+
 .hero-content {
   position: relative;
   z-index: 3;
