@@ -316,16 +316,16 @@ a:hover {
 /* Linkes Bild in der Hero-Section */
 .hero-person {
   position: absolute;
-  left: clamp(40px, 10vw, 160px);
+  left: clamp(24px, 6vw, 120px);
   bottom: 0;
-  width: min(45vw, 756px);
+  width: min(54vw, 908px);
   height: auto;
   z-index: 20;
   pointer-events: none;
 }
 
 @media (max-width: 768px) {
-  .hero-person { width: min(68vw, 392px); left: clamp(20px, 6vw, 48px); bottom: 0; }
+  .hero-person { width: min(81.6vw, 470px); left: clamp(14px, 4vw, 32px); bottom: 0; }
 }
 
 .hero-content {
