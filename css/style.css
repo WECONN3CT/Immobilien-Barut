@@ -248,7 +248,7 @@ a:hover {
   content: '';
   position: absolute;
   bottom: -4px;
-  left: -12px;
+  left: 0;
   width: 0;
   height: 2px;
   background: var(--color-orange);
@@ -325,7 +325,7 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .hero-person { width: min(81.6vw, 470px); left: -8px; bottom: 0; }
+  .hero-person { width: min(81.6vw, 470px); left: 0; bottom: 0; }
 }
 
 .hero-content {
