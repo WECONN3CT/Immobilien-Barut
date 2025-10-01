@@ -711,7 +711,7 @@ a:hover {
   width: 120px;
   height: 4px;
   margin: 1rem auto 1.25rem;
-  background: #FFFFFF;
+  background: linear-gradient(90deg, var(--color-orange), var(--color-light-orange));
   border-radius: 999px;
 }
 
