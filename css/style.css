@@ -292,6 +292,7 @@ a:hover {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  background-attachment: scroll; /* default, JS bewegt background-position */
 }
 
 /* Hannover Badge in Hero */

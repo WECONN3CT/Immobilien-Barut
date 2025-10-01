@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Stats counter animation
     initStatsCounters();
+
+    // Hero background parallax
+    initHeroParallax();
 });
 
 // ===================================
@@ -650,4 +653,49 @@ function initStatsCounters() {
     }, { threshold: 0.3 });
 
     counters.forEach(el => observer.observe(el));
+}
+
+// ===================================
+// Hero Parallax Background
+// ===================================
+
+function initHeroParallax() {
+    const hero = document.querySelector('.hero-media');
+    if (!hero) return;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return;
+
+    let enabled = window.innerWidth >= 768;
+    let rafId = null;
+    const speed = 0.25; // parallax strength
+
+    const update = () => {
+        if (!enabled) return;
+        const rect = hero.getBoundingClientRect();
+        const offsetY = rect.top * speed;
+        hero.style.backgroundPosition = `center calc(50% + ${offsetY}px)`;
+    };
+
+    const onScroll = () => {
+        if (!enabled) return;
+        if (rafId) return;
+        rafId = requestAnimationFrame(() => {
+            update();
+            rafId = null;
+        });
+    };
+
+    const onResize = () => {
+        enabled = window.innerWidth >= 768;
+        if (!enabled) {
+            hero.style.backgroundPosition = 'center';
+        } else {
+            update();
+        }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onResize);
+    update();
 }
