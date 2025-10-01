@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Stats counter animation
     initStatsCounters();
+
+    // About header parallax (Über uns Seite)
+    initAboutHeaderParallax();
 });
 
 // ===================================
@@ -650,6 +653,50 @@ function initStatsCounters() {
     }, { threshold: 0.3 });
 
     counters.forEach(el => observer.observe(el));
+}
+
+// ===================================
+// About Header Parallax (Über uns)
+// ===================================
+
+function initAboutHeaderParallax() {
+    const header = document.querySelector('.about-header');
+    if (!header) return;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return;
+
+    let enabled = window.innerWidth >= 768;
+    let rafId = null;
+    const speed = 0.25; // Parallax-Stärke
+
+    const update = () => {
+        if (!enabled) return;
+        const rect = header.getBoundingClientRect();
+        const offsetY = rect.top * speed;
+        header.style.backgroundPosition = `center calc(50% + ${offsetY}px)`;
+    };
+
+    const onScroll = () => {
+        if (!enabled || rafId) return;
+        rafId = requestAnimationFrame(() => {
+            update();
+            rafId = null;
+        });
+    };
+
+    const onResize = () => {
+        enabled = window.innerWidth >= 768;
+        if (!enabled) {
+            header.style.backgroundPosition = 'center';
+        } else {
+            update();
+        }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onResize);
+    update();
 }
 
 // ===================================
