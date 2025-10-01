@@ -741,6 +741,9 @@ a:hover {
   box-shadow: 0 8px 25px rgba(30, 58, 95, 0.35);
 }
 
+/* Mehr Abstand nach unten für den Hero-Button */
+.hero-content .btn-hero { margin-top: clamp(16px, 5vh, 56px); }
+
 .btn-hero:hover {
   background: var(--color-dark-navy);
   transform: translateY(-2px);
@@ -756,24 +759,6 @@ a:hover {
   .hero-title::after { width: 72px; margin: 0.75rem auto 1rem; }
   .hero-subtitle { font-size: clamp(0.95rem, 2.8vw, 1.1rem); margin-bottom: 1.25rem; }
   .btn-hero { width: 100%; max-width: 280px; padding: 0.85rem 1.25rem; }
-}
-
-/* Hero CTA unten mittig im Container */
-.hero-cta {
-  position: absolute;
-  left: 50%;
-  bottom: clamp(24px, 10vh, 120px);
-  transform: translateX(-50%);
-  z-index: 4;
-}
-
-@media (max-width: 768px) {
-  .hero-cta { bottom: clamp(16px, 8vh, 80px); }
-}
-
-/* Animation der separaten CTA synchronisieren */
-.hero-content.is-animated ~ .hero-cta {
-  animation: heroPopIn 750ms cubic-bezier(0.22, 1, 0.36, 1) 420ms both;
 }
 
 @media (max-width: 480px) {
