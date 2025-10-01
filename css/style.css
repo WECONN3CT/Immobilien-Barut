@@ -237,6 +237,7 @@ a:hover {
   text-decoration: none;
   transition: var(--transition-default);
   position: relative;
+  display: inline-block; /* sorgt dafür, dass ::after exakt unter dem Text läuft */
 }
 
 .nav-link:hover,
@@ -248,7 +249,7 @@ a:hover {
   content: '';
   position: absolute;
   bottom: -4px;
-  left: -24px;
+  left: 0; /* exakt unter dem Link starten */
   width: 0;
   height: 2px;
   background: var(--color-orange);
