@@ -731,9 +731,9 @@ a:hover {
 .btn-hero {
   background: var(--color-navy);
   color: var(--color-white);
-  padding: 0.9rem 1.5rem;
+  padding: 1.8rem 3rem;
   border-radius: var(--radius-md);
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 700;
   border: none;
   cursor: pointer;
@@ -758,7 +758,7 @@ a:hover {
   .hero-title { font-size: clamp(1.8rem, 7.2vw, 2.4rem); letter-spacing: -0.015em; }
   .hero-title::after { width: 72px; margin: 0.75rem auto 1rem; }
   .hero-subtitle { font-size: clamp(0.95rem, 2.8vw, 1.1rem); margin-bottom: 1.25rem; }
-  .btn-hero { width: 100%; max-width: 280px; padding: 0.85rem 1.25rem; }
+  .btn-hero { width: 100%; max-width: 560px; padding: 1.7rem 2.5rem; font-size: 2rem; }
 }
 
 @media (max-width: 480px) {
