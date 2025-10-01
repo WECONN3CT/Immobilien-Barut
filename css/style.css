@@ -322,11 +322,6 @@ a:hover {
   height: auto;
   z-index: 2;
   pointer-events: none;
-  image-rendering: -webkit-optimize-contrast; /* bessere Schärfe bei Skalierung in WebKit */
-  image-rendering: crisp-edges; /* Fallback */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform: translateZ(0);
 }
 
 @media (max-width: 768px) {
