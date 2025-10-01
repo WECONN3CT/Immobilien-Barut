@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // About header parallax (Über uns Seite)
     initAboutHeaderParallax();
+    // Werte-Animation (Über uns)
+    initValuesReveal();
 });
 
 // ===================================
@@ -697,6 +699,34 @@ function initAboutHeaderParallax() {
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onResize);
     update();
+}
+
+// ===================================
+// Werte-Section: Staggered Reveal
+// ===================================
+
+function initValuesReveal() {
+    const grid = document.querySelector('.values-grid');
+    if (!grid) return;
+
+    const items = Array.from(grid.querySelectorAll('.value-card'));
+    if (!items.length) return;
+
+    // Startzustand per CSS: opacity 0, translateY
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                items.forEach((el, i) => {
+                    setTimeout(() => {
+                        el.classList.add('revealed');
+                    }, i * 140); // weiche Staffelung
+                });
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.2 });
+
+    observer.observe(grid);
 }
 
 // ===================================
