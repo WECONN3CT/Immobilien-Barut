@@ -742,7 +742,7 @@ a:hover {
 }
 
 /* Mehr Abstand nach unten für den Hero-Button */
-.hero-content .btn-hero { margin-top: clamp(16px, 5vh, 56px); }
+.hero-content .btn-hero { margin-top: clamp(48px, 15vh, 168px); }
 
 .btn-hero:hover {
   background: var(--color-dark-navy);
