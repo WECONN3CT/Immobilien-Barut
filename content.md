@@ -19,7 +19,7 @@
 
 ## Team Mitglieder
 
-### Mehmet Barut (Geschäftsführer)
+### Adem Barut (Geschäftsführer)
 - Immobilienmakler seit 2008
 - Spezialist für Wohnimmobilien
 - Telefon: +49 89 123 456 78
