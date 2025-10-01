@@ -350,6 +350,74 @@ a:hover {
   text-align: center;
 }
 
+/* Hero Intro Animations */
+.hero-content.has-hero-anim .hero-title,
+.hero-content.has-hero-anim .hero-subtitle,
+.hero-content.has-hero-anim .btn-hero {
+  opacity: 0;
+}
+
+.hero-content.has-hero-anim .hero-title::after {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.hero-content.is-animated .hero-title {
+  animation: heroFadeUpScale 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-content.is-animated .hero-title::after {
+  animation: heroUnderlineSweep 560ms cubic-bezier(0.22, 1, 0.36, 1) 160ms both;
+}
+
+.hero-content.is-animated .hero-subtitle {
+  animation: heroFadeUp 600ms cubic-bezier(0.22, 1, 0.36, 1) 140ms both;
+}
+
+.hero-content.is-animated .btn-hero {
+  animation: heroPopIn 450ms cubic-bezier(0.22, 1, 0.36, 1) 240ms both;
+}
+
+@keyframes heroFadeUpScale {
+  from { opacity: 0; transform: translateY(18px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroPopIn {
+  from { opacity: 0; transform: scale(1.04); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes heroUnderlineSweep {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content.has-hero-anim .hero-title,
+  .hero-content.has-hero-anim .hero-subtitle,
+  .hero-content.has-hero-anim .btn-hero {
+    opacity: 1;
+    transform: none !important;
+    animation: none !important;
+  }
+  .hero-content.has-hero-anim .hero-title::after {
+    transform: none;
+    animation: none;
+  }
+  .hero-content.is-animated .hero-title,
+  .hero-content.is-animated .hero-subtitle,
+  .hero-content.is-animated .btn-hero,
+  .hero-content.is-animated .hero-title::after {
+    animation: none;
+  }
+}
+
 /* ================================
    Hero Search Filter
    ================================ */

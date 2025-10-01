@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initAboutHeaderParallax();
     // Werte-Animation (Über uns)
     initValuesReveal();
+
+    // Hero: Intro Animation (Titel, Untertitel, Button)
+    initHeroIntroAnimation();
 });
 
 // ===================================
@@ -524,6 +527,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.service-card, .property-card, .about-preview');
     animatedElements.forEach(el => scrollObserver.observe(el));
 });
+
+// Hero Intro Animation
+function initHeroIntroAnimation() {
+    const content = document.querySelector('.hero-content.has-hero-anim');
+    if (!content) return;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+        content.classList.add('is-animated');
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                content.classList.add('is-animated');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.35, rootMargin: '0px 0px -10% 0px' });
+
+    observer.observe(content);
+}
 
 // ===================================
 // Properties Carousel
