@@ -328,8 +328,8 @@ a:hover {
 .hero-people {
   position: absolute;
   right: -216px;
-  bottom: -64px;
-  width: min(72vw, 1229px);
+  bottom: -88px;
+  width: min(78vw, 1344px);
   height: auto;
   z-index: 30; /* ganz vorne über Content und linker Person */
   pointer-events: none;
@@ -337,7 +337,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .hero-person { width: min(81.6vw, 470px); left: -44px !important; bottom: 0; }
-  .hero-people { width: min(108vw, 624px); right: -108px; bottom: -36px; }
+  .hero-people { width: min(120vw, 700px); right: -108px; bottom: -48px; }
 }
 
 .hero-content {
