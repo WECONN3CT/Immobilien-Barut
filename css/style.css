@@ -316,7 +316,7 @@ a:hover {
 /* Linkes Bild in der Hero-Section */
 .hero-person {
   position: absolute;
-  left: -80px !important;
+  left: -100px !important;
   bottom: 0;
   width: min(54vw, 908px);
   height: auto;
@@ -325,7 +325,7 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .hero-person { width: min(81.6vw, 470px); left: -32px !important; bottom: 0; }
+  .hero-person { width: min(81.6vw, 470px); left: -44px !important; bottom: 0; }
 }
 
 .hero-content {
