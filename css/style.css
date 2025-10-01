@@ -320,7 +320,7 @@ a:hover {
   bottom: 0;
   width: min(32vw, 460px);
   height: auto;
-  z-index: 2;
+  z-index: 20;
   pointer-events: none;
 }
 
