@@ -1004,7 +1004,8 @@ a:hover {
 .contact-sub { color: var(--color-dark-gray); margin-bottom: var(--spacing-md); }
 
 .contact-bullets { list-style: none; display: grid; gap: 12px; text-align: left; }
-.contact-bullets li { display: grid; grid-template-columns: 20px 1fr; gap: 10px; align-items: start; color: var(--color-charcoal); }
+.contact-bullets li { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: center; color: var(--color-charcoal); }
+.contact-bullets li svg { display: block; margin-top: 2px; }
 
 @media (max-width: 1024px) {
   .contact-grid { grid-template-columns: 1fr; }
