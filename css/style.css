@@ -868,6 +868,19 @@ a:hover {
   border-color: var(--color-navy);
 }
 
+/* Hero-spezifischer Hover: transparent mit dunkelblauem Rand, weicher Übergang */
+.hero-content .btn.btn-hero {
+  border: 2px solid transparent;
+  transition: var(--transition-default);
+}
+.hero-content .btn.btn-hero:hover {
+  background: transparent;
+  color: var(--color-navy);
+  border-color: var(--color-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(21, 43, 66, 0.25);
+}
+
 /* ===================================
    Sections
    =================================== */
