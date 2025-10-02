@@ -739,7 +739,7 @@ a:hover {
   border-radius: var(--radius-md);
   font-size: 2.25rem;
   font-weight: 700;
-  border: none;
+  border: 2px solid transparent;
   cursor: pointer;
   transition: var(--transition-default);
   box-shadow: 0 8px 25px rgba(30, 58, 95, 0.35);
@@ -749,9 +749,11 @@ a:hover {
 .hero-content .btn-hero { margin-top: clamp(48px, 15vh, 168px); }
 
 .btn-hero:hover {
-  background: var(--color-dark-navy);
+  background: transparent;
+  color: var(--color-navy);
+  border-color: var(--color-navy);
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(21, 43, 66, 0.45);
+  box-shadow: 0 10px 28px rgba(21, 43, 66, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -930,8 +932,9 @@ a:hover {
 .btn-navy {
   background: var(--color-navy);
   color: var(--color-white);
+  border: 2px solid transparent;
 }
-.btn-navy:hover { background: var(--color-dark-navy); color: var(--color-white); }
+.btn-navy:hover { background: transparent; color: var(--color-navy); border-color: var(--color-navy); }
 
 .section-cta {
   text-align: center;
