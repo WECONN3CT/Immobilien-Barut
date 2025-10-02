@@ -349,23 +349,10 @@ a:hover {
   padding: 0 var(--spacing-xl);
   padding-top: clamp(12px, 8vh, 100px);
   text-align: center;
-  /* Robust zentriert, unabhängig von Browser/Rendering auf GitHub Pages */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-/* Erzwingt mittige Ausrichtung, falls ein Browser Vererbung anders interpretiert */
-.hero-title,
-.hero-subtitle,
-.btn-hero {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-/* Sicherheitsnetz gegen ungewolltes Floaten des CTA-Buttons */
-.btn-hero { float: none; }
 
 /* Hero Intro Animations */
 .hero-content.has-hero-anim .hero-title,
