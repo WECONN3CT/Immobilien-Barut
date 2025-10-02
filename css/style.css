@@ -1774,3 +1774,10 @@ a:hover {
   .partner-media { min-height: 440px; }
   .partner-textbox { padding: 1rem; margin-bottom: var(--spacing-lg); }
 }
+
+/* Partner-Button: Hover mit weißem Text und weißem Rand */
+.section-partner .partner-btn:hover {
+  background: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
