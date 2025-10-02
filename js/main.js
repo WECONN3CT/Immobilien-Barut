@@ -140,7 +140,7 @@ async function loadFeaturedProperties() {
         
         featuredContainer.innerHTML = featuredProperties.map(property => `
             <article class="property-card">
-                <img src="${property.images[0] || 'images/properties/placeholder.jpg'}" 
+                <img src="${property.images[0] || 'images/properties/placeholder.svg'}" 
                      alt="${property.title}" 
                      class="property-image"
                      loading="lazy">
@@ -202,7 +202,7 @@ async function loadNewestProperties() {
         const newest = data.properties.slice(0, 6);
         newestContainer.innerHTML = newest.map(property => `
             <article class="property-card">
-                <img src="${property.images[0] || 'images/properties/placeholder.jpg'}" 
+                <img src="${property.images[0] || 'images/properties/placeholder.svg'}" 
                      alt="${property.title}" 
                      class="property-image"
                      loading="lazy">

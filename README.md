@@ -34,7 +34,7 @@ Statische Website für Barut Immobilien - Ihr vertrauensvoller Immobilienpartner
 │   └── properties.js     # Immobilien-Filter
 ├── data/
 │   └── properties.json   # Immobilien-Daten
-└── images/               # Bilder und Assets
+└── images/               # Bilder und Assets (Hinweis: GitHub Pages ist case-sensitive; Dateinamen exakt verwenden)
 ```
 
 ## 🚀 Lokale Entwicklung

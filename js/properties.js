@@ -53,7 +53,7 @@ function displayProperties() {
     
     grid.innerHTML = propertiesToShow.map(property => `
         <article class="property-card" id="property-${property.id}">
-            <img src="${property.images[0] || 'images/properties/placeholder.jpg'}" 
+            <img src="${property.images[0] || 'images/properties/placeholder.svg'}" 
                  alt="${property.title}" 
                  class="property-image"
                  loading="lazy">
@@ -251,7 +251,7 @@ function showPropertyDetails(propertyId) {
         <div class="modal-content">
             <button class="modal-close" onclick="closePropertyModal()">×</button>
             <div class="modal-images">
-                <img src="${property.images[0] || 'images/properties/placeholder.jpg'}" 
+                <img src="${property.images[0] || 'images/properties/placeholder.svg'}" 
                      alt="${property.title}" 
                      class="modal-main-image">
                 ${property.images.length > 1 ? `
