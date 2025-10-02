@@ -1013,6 +1013,29 @@ a:hover {
   .contact-aside { text-align: center; }
 }
 
+/* Kontaktformular: Akzente in Dunkelblau statt Orange */
+.section-contact .form-input:focus,
+.section-contact .form-textarea:focus {
+  border-color: var(--color-navy);
+  box-shadow: 0 0 0 3px rgba(30,58,95,0.15);
+}
+
+.section-contact .btn-primary {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.section-contact .btn-primary:hover {
+  background: var(--color-dark-navy);
+  color: var(--color-white);
+  box-shadow: 0 6px 20px rgba(30,58,95,0.3);
+}
+
+.section-contact .btn-primary:focus {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
+}
+
 /* ===================================
    Services Grid
    =================================== */
