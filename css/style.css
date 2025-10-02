@@ -851,6 +851,23 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Hero/Navy Buttons: Hover transparent mit dunkelblauem Rand (spezifischer als .btn) */
+.btn.btn-hero {
+  border: 2px solid transparent;
+}
+.btn.btn-hero:hover {
+  background: transparent;
+  color: var(--color-navy);
+  border-color: var(--color-navy);
+}
+
+/* Zusätzliche Spezifität für .btn-navy Hover */
+.btn.btn-navy:hover {
+  background: transparent;
+  color: var(--color-navy);
+  border-color: var(--color-navy);
+}
+
 /* ===================================
    Sections
    =================================== */
@@ -908,13 +925,14 @@ a:hover {
   height: 44px;
   padding: 0 1.25rem;
   border-radius: 10px;
-  border: none;
+  border: 2px solid transparent;
   background: var(--color-navy);
   color: var(--color-white);
   font-weight: 700;
   cursor: pointer;
+  transition: var(--transition-default);
 }
-.properties-submit:hover { background: var(--color-dark-navy); }
+.properties-submit:hover { background: transparent; color: var(--color-navy); border-color: var(--color-navy); }
 
 .properties-subtitle {
   font-size: 1.5rem;
