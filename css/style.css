@@ -598,7 +598,7 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-lg);
-  margin-top: calc(var(--spacing-xl) * 2.925);
+  margin-top: calc(var(--spacing-xl) * 2.0);
 }
 
 .award-card {
