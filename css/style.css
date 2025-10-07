@@ -760,13 +760,13 @@ a:hover {
   .hero-section { padding: 0; }
   /* Mobile fine-tuning for hero content */
   .hero-section > .container { padding: 0; }
-  .hero-content { width: 100%; max-width: none; padding-left: 0; padding-right: 0; }
+  .hero-content { width: 100%; max-width: 70vw; margin: 0 auto; padding-left: 0; padding-right: 0; }
   /* Mindesthöhe der Hero auf Mobile reduzieren, Container trotzdem volle Breite */
   .hero-media { min-height: 70vh; }
   .hero-title { font-size: clamp(1.7rem, 6.8vw, 2.3rem); letter-spacing: -0.015em; }
   .hero-title::after { width: 72px; margin: 0.75rem auto 1rem; }
   .hero-subtitle { font-size: clamp(0.95rem, 2.8vw, 1.05rem); margin-bottom: 1rem; }
-  .btn-hero { width: 100%; max-width: 520px; padding: 1.4rem 2rem; font-size: 1.35rem; box-shadow: 0 6px 18px rgba(30, 58, 95, 0.28); }
+  .btn-hero { width: auto; max-width: 100%; padding: 1rem 1.4rem; box-shadow: 0 6px 18px rgba(30, 58, 95, 0.28); }
   /* blendet die dekorativen Bilder auf kleineren Screens aus, um Textfokus zu erhöhen */
   .hero-person, .hero-people { display: none; }
   /* stärkeres Overlay für besseren Kontrast in Mobile */
