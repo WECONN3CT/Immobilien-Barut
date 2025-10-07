@@ -771,6 +771,8 @@ a:hover {
   .hero-person, .hero-people { display: none; }
   /* stärkeres Overlay für besseren Kontrast in Mobile */
   .hero-media-overlay { background: linear-gradient(180deg, rgba(21,43,66,0.55) 0%, rgba(21,43,66,0.42) 60%, rgba(21,43,66,0.18) 100%); }
+  /* Titel nur mobil ausblenden */
+  .hero-title { display: none; }
 }
 
 @media (max-width: 480px) {
