@@ -762,7 +762,7 @@ a:hover {
   .hero-section > .container { padding: 0 12px; }
   .hero-content { padding-top: clamp(20px, 10vh, 96px); }
   /* Mindesthöhe der Hero auf Mobile erhöhen, damit Titel/Untertitel/Button sichtbar bleiben */
-  .hero-media { min-height: 88vh; }
+  .hero-media { min-height: 82vh; }
   .hero-title { font-size: clamp(1.7rem, 6.8vw, 2.3rem); letter-spacing: -0.015em; }
   .hero-title::after { width: 72px; margin: 0.75rem auto 1rem; }
   .hero-subtitle { font-size: clamp(0.95rem, 2.8vw, 1.05rem); margin-bottom: 1rem; }
@@ -778,7 +778,7 @@ a:hover {
   .hero-title::after { width: 64px; }
   .hero-subtitle { font-size: 0.95rem; }
   /* auf sehr kleinen Geräten etwas mehr Höhe geben */
-  .hero-media { min-height: 92vh; }
+  .hero-media { min-height: 88vh; }
 }
 
 /* Floors über Container Queries, ohne das 2100/1022-Verhältnis zu brechen */
