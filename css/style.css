@@ -701,11 +701,11 @@ a:hover {
   line-height: 1.04;
   margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
-  color: var(--color-navy);
+  color: #000;
   background: none;
   -webkit-background-clip: initial;
   background-clip: initial;
-  -webkit-text-fill-color: var(--color-navy);
+  -webkit-text-fill-color: #000;
 }
 
 .hero-title::after {
@@ -719,7 +719,7 @@ a:hover {
 }
 
 .hero-subtitle {
-  color: var(--color-navy);
+  color: #000;
   font-size: clamp(1.05rem, 2.1vw, 1.35rem);
   font-weight: 500;
   margin-bottom: 1.75rem;
@@ -729,7 +729,7 @@ a:hover {
 /* Glass look for hero content block for modern aesthetic */
 .hero-content {
   backdrop-filter: saturate(120%) blur(2px);
-  color: var(--color-navy);
+  color: #000;
 }
 
 .btn-hero {
