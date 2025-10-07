@@ -1469,6 +1469,24 @@ a:hover {
 }
 
 /* ===================================
+   Performance: Offscreen Rendering
+   =================================== */
+/* Verhindert Rendering von Offscreen-Sektionen bis sie in View sind */
+.section,
+.section-alternate,
+.section-cta,
+.section-partner,
+.section-intro,
+.team-section,
+.trust-section,
+.values-section,
+.properties-header,
+.filter-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px;
+}
+
+/* ===================================
    Footer
    =================================== */
 

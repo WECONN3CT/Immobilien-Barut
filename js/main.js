@@ -143,7 +143,8 @@ async function loadFeaturedProperties() {
                 <img src="${property.images[0] || 'images/properties/placeholder.svg'}" 
                      alt="${property.title}" 
                      class="property-image"
-                     loading="lazy">
+                     loading="lazy"
+                     decoding="async">
                 <div class="property-content">
                     <div class="property-price">
                         ${property.type === 'Miete' ? property.price.toLocaleString('de-DE') + ' €/Monat' : property.price.toLocaleString('de-DE') + ' €'}
@@ -205,7 +206,8 @@ async function loadNewestProperties() {
                 <img src="${property.images[0] || 'images/properties/placeholder.svg'}" 
                      alt="${property.title}" 
                      class="property-image"
-                     loading="lazy">
+                     loading="lazy"
+                     decoding="async">
                 <div class="property-content">
                     <div class="property-price">
                         ${property.type === 'Miete' ? property.price.toLocaleString('de-DE') + ' €/Monat' : property.price.toLocaleString('de-DE') + ' €'}
