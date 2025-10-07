@@ -718,6 +718,15 @@ a:hover {
   border-radius: 999px;
 }
 
+/* Mobile/desktop Varianten des Hero-Titels */
+.hero-title .title-mobile { display: none; }
+.hero-title .title-desktop { display: inline; }
+
+@media (max-width: 768px) {
+  .hero-title .title-mobile { display: inline; }
+  .hero-title .title-desktop { display: none; }
+}
+
 .hero-subtitle {
   color: #000;
   font-size: clamp(1.05rem, 2.1vw, 1.35rem);
