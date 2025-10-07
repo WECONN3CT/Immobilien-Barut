@@ -718,15 +718,6 @@ a:hover {
   border-radius: 999px;
 }
 
-/* Mobile/desktop Varianten des Hero-Titels */
-.hero-title .title-mobile { display: none; }
-.hero-title .title-desktop { display: inline; }
-
-@media (max-width: 768px) {
-  .hero-title .title-mobile { display: inline; }
-  .hero-title .title-desktop { display: none; }
-}
-
 .hero-subtitle {
   color: #000;
   font-size: clamp(1.05rem, 2.1vw, 1.35rem);
@@ -770,8 +761,8 @@ a:hover {
   /* Mobile fine-tuning for hero content */
   .hero-section > .container { padding: 0; }
   .hero-content { width: 100%; max-width: 70vw; margin: 0 auto; padding-left: 0; padding-right: 0; }
-  /* Mindesthöhe der Hero auf Mobile reduzieren, Container trotzdem volle Breite */
-  .hero-media { min-height: 70vh; }
+  /* Mindesthöhe der Hero auf Mobile weiter reduziert */
+  .hero-media { min-height: 50vh; }
   .hero-title { font-size: clamp(1.7rem, 6.8vw, 2.3rem); letter-spacing: -0.015em; }
   .hero-title::after { width: 72px; margin: 0.75rem auto 1rem; }
   .hero-subtitle { font-size: clamp(0.95rem, 2.8vw, 1.05rem); margin-bottom: 1rem; }
