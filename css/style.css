@@ -692,7 +692,7 @@ a:hover {
 
 @media (max-width: 1024px) {
   .intro-grid { grid-template-columns: 1fr; }
-  .intro-awards { grid-template-columns: repeat(2, 1fr); margin-top: 0; }
+  .intro-awards { grid-template-columns: 1fr; margin-top: 0; }
 }
 
 .hero-title {
